@@ -13,6 +13,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    
+    let myView = UIView()
+        myView.translatesAutoresizingMaskIntoConstraints = false
+        myView.backgroundColor = UIColor.redColor()
+        view.addSubview(myView)
+        
+        
+    
+    
     }
 
     override func didReceiveMemoryWarning() {
