@@ -21,9 +21,11 @@ class ViewController: UIViewController {
         
         let views = ["myView" : myView]
         
-        let constraint1 = NSLayoutConstraint.constraintsWithVisualFormat("|[myView]|", options: .AlignAllTop, metrics: nil, views: views)
-        let constraint2 = NSLayoutConstraint.constraintsWithVisualFormat("V:|[myView]|", options: .AlignAllTop, metrics: nil, views: views)
+        let constraints1 = NSLayoutConstraint.constraintsWithVisualFormat("|[myView]|", options: .AlignAllTop, metrics: nil, views: views)
+        let constraints2 = NSLayoutConstraint.constraintsWithVisualFormat("V:|[myView]|", options: .AlignAllTop, metrics: nil, views: views)
     
+        NSLayoutConstraint.activateConstraints(constraints1)
+        NSLayoutConstraint.activateConstraints(constraints2)
     
     }
 
