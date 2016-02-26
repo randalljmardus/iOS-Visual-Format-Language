@@ -19,13 +19,10 @@ class ViewController: UIViewController {
         myView.backgroundColor = UIColor.redColor()
         view.addSubview(myView)
         
-        let views = ["myView" : myView]
+        let views = ["myView" : myView, "super" : view]
         
-        let constraints1 = NSLayoutConstraint.constraintsWithVisualFormat("|[myView(100,<=50)]", options: .AlignAllTop, metrics: nil, views: views)
+        let constraints1 = NSLayoutConstraint.constraintsWithVisualFormat("|[myView(super)]", options: .AlignAllTop, metrics: nil, views: views)
         let constraints2 = NSLayoutConstraint.constraintsWithVisualFormat("V:[myView(200)]|", options: .AlignAllTop, metrics: nil, views: views)
-    
-        
-        
         
         NSLayoutConstraint.activateConstraints(constraints1)
         NSLayoutConstraint.activateConstraints(constraints2)
