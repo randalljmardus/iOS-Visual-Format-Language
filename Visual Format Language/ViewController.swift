@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         
         let views = ["myView" : myView, "super" : view]
         
-        let constraints1 = NSLayoutConstraint.constraintsWithVisualFormat("|[myView(super)]", options: .AlignAllTop, metrics: nil, views: views)
+        let constraints1 = NSLayoutConstraint.constraintsWithVisualFormat("|[myView]|", options: .AlignAllTop, metrics: nil, views: views)
         let constraints2 = NSLayoutConstraint.constraintsWithVisualFormat("V:[myView(200)]|", options: .AlignAllTop, metrics: nil, views: views)
         
         NSLayoutConstraint.activateConstraints(constraints1)
